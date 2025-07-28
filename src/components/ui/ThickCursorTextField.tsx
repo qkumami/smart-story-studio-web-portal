@@ -16,7 +16,6 @@ export interface ThickCursorTextFieldProps {
 
 export const ThickCursorTextField = forwardRef<HTMLInputElement, ThickCursorTextFieldProps>(
   ({ value, onChange, placeholder = '', contentType = 'content', font = 'var(--font-family)', className, disabled = false, required = false, autoFocus = false, name, id }, ref) => {
-    const [isFocused, setIsFocused] = useState(false);
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
       onChange(e.target.value);

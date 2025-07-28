@@ -1,31 +1,31 @@
-'use client';
+'apos;use client'apos;;
 
-import { useState } from 'react';
-import { ThickCursorTextField } from '@/components/ui/ThickCursorTextField';
-import { ThickCursorTextEditor } from '@/components/ui/ThickCursorTextEditor';
+import { useState } from 'apos;react'apos;;
+import { ThickCursorTextField } from 'apos;@/components/ui/ThickCursorTextField'apos;;
+import { ThickCursorTextEditor } from 'apos;@/components/ui/ThickCursorTextEditor'apos;;
 
 export default function HomePage() {
-  const [educatorName, setEducatorName] = useState('');
-  const [studentName, setStudentName] = useState('');
-  const [date, setDate] = useState('');
-  const [engagementSummary, setEngagementSummary] = useState('');
-  const [learningOutcomes, setLearningOutcomes] = useState('');
-  const [whatsNext, setWhatsNext] = useState('');
+  const [educatorName, setEducatorName] = useState('apos;'apos;);
+  const [studentName, setStudentName] = useState('apos;'apos;);
+  const [date, setDate] = useState('apos;'apos;);
+  const [engagementSummary, setEngagementSummary] = useState('apos;'apos;);
+  const [learningOutcomes, setLearningOutcomes] = useState('apos;'apos;);
+  const [whatsNext, setWhatsNext] = useState('apos;'apos;);
 
   return (
     <div className="page-background">
       <div className="container">
         <div className="form-container">
-          <h1 className="text-3xl font-bold mb-6 text-center" style={{ color: 'var(--color-text-primary)' }}>
+          <h1 className="text-3xl font-bold mb-6 text-center" style={{ color: 'apos;var(--color-text-primary)'apos; }}>
             Smart Story Studio - Web Portal
           </h1>
-          <p className="text-center mb-8" style={{ color: 'var(--color-text-secondary)' }}>
+          <p className="text-center mb-8" style={{ color: 'apos;var(--color-text-secondary)'apos; }}>
             iOS-Matching Web Interface - Thursday Client Demo
           </p>
 
           <div className="form-fields">
             <div>
-              <label className="block mb-2 font-medium" style={{ color: 'var(--color-text-primary)' }}>
+              <label className="block mb-2 font-medium" style={{ color: 'apos;var(--color-text-primary)'apos; }}>
                 Educator Name
               </label>
               <ThickCursorTextField
@@ -38,7 +38,7 @@ export default function HomePage() {
             </div>
 
             <div>
-              <label className="block mb-2 font-medium" style={{ color: 'var(--color-text-primary)' }}>
+              <label className="block mb-2 font-medium" style={{ color: 'apos;var(--color-text-primary)'apos; }}>
                 Student Name
               </label>
               <ThickCursorTextField
@@ -51,7 +51,7 @@ export default function HomePage() {
             </div>
 
             <div>
-              <label className="block mb-2 font-medium" style={{ color: 'var(--color-text-primary)' }}>
+              <label className="block mb-2 font-medium" style={{ color: 'apos;var(--color-text-primary)'apos; }}>
                 Date
               </label>
               <input
@@ -64,7 +64,7 @@ export default function HomePage() {
             </div>
 
             <div>
-              <label className="block mb-2 font-medium" style={{ color: 'var(--color-text-primary)' }}>
+              <label className="block mb-2 font-medium" style={{ color: 'apos;var(--color-text-primary)'apos; }}>
                 Engagement Summary
               </label>
               <ThickCursorTextEditor
@@ -77,7 +77,7 @@ export default function HomePage() {
             </div>
 
             <div>
-              <label className="block mb-2 font-medium" style={{ color: 'var(--color-text-primary)' }}>
+              <label className="block mb-2 font-medium" style={{ color: 'apos;var(--color-text-primary)'apos; }}>
                 Learning Outcomes
               </label>
               <ThickCursorTextEditor
@@ -90,8 +90,8 @@ export default function HomePage() {
             </div>
 
             <div>
-              <label className="block mb-2 font-medium" style={{ color: 'var(--color-text-primary)' }}>
-                What's Next
+              <label className="block mb-2 font-medium" style={{ color: 'apos;var(--color-text-primary)'apos; }}>
+                What'apos;s Next
               </label>
               <ThickCursorTextEditor
                 value={whatsNext}
@@ -114,30 +114,30 @@ export default function HomePage() {
         </div>
 
         <div className="report-container">
-          <h2 className="text-2xl font-bold mb-4" style={{ color: 'var(--color-text-primary)' }}>
+          <h2 className="text-2xl font-bold mb-4" style={{ color: 'apos;var(--color-text-primary)'apos; }}>
             Report Preview
           </h2>
           <div className="space-y-4">
             <div>
-              <strong>Educator:</strong> {educatorName || 'Not specified'}
+              <strong>Educator:</strong> {educatorName || 'apos;Not specified'apos;}
             </div>
             <div>
-              <strong>Student:</strong> {studentName || 'Not specified'}
+              <strong>Student:</strong> {studentName || 'apos;Not specified'apos;}
             </div>
             <div>
-              <strong>Date:</strong> {date || 'Not specified'}
+              <strong>Date:</strong> {date || 'apos;Not specified'apos;}
             </div>
             <div>
               <strong>Engagement Summary:</strong>
-              <p className="mt-1">{engagementSummary || 'No content yet'}</p>
+              <p className="mt-1">{engagementSummary || 'apos;No content yet'apos;}</p>
             </div>
             <div>
               <strong>Learning Outcomes:</strong>
-              <p className="mt-1">{learningOutcomes || 'No content yet'}</p>
+              <p className="mt-1">{learningOutcomes || 'apos;No content yet'apos;}</p>
             </div>
             <div>
-              <strong>What's Next:</strong>
-              <p className="mt-1">{whatsNext || 'No content yet'}</p>
+              <strong>What'apos;s Next:</strong>
+              <p className="mt-1">{whatsNext || 'apos;No content yet'apos;}</p>
             </div>
           </div>
         </div>

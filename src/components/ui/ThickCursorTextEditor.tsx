@@ -18,7 +18,6 @@ export interface ThickCursorTextEditorProps {
 
 export const ThickCursorTextEditor = forwardRef<HTMLTextAreaElement, ThickCursorTextEditorProps>(
   ({ value, onChange, placeholder = '', contentType = 'content', font = 'var(--font-family)', className, disabled = false, required = false, autoFocus = false, name, id, minHeight = 'var(--texteditor-min-height)', maxHeight = 'var(--texteditor-max-height)' }, ref) => {
-    const [isFocused, setIsFocused] = useState(false);
 
     const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
       onChange(e.target.value);
