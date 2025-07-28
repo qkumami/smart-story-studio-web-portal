@@ -1,5 +1,6 @@
 'use client';
 
+import React from 'react';
 import { useState } from 'react';
 import { ThickCursorTextField } from '@/components/ui/ThickCursorTextField';
 import { ThickCursorTextEditor } from '@/components/ui/ThickCursorTextEditor';
@@ -13,19 +14,18 @@ export default function HomePage() {
   const [whatsNext, setWhatsNext] = useState('');
 
   return (
-    <div className="page-background">
-      <div className="container">
-        <div className="form-container">
+    <div className="page-background min-h-screen flex items-center justify-center">
+      <div className="main-content flex flex-col md:flex-row gap-12 w-full max-w-4xl p-6 md:p-12">
+        <div className="form-container bg-white rounded-xl shadow-md p-8 flex-1">
           <h1 className="text-3xl font-bold mb-6 text-center" style={{ color: 'var(--color-text-primary)' }}>
             Smart Story Studio - Web Portal
           </h1>
-          <p className="text-center mb-8" style={{ color: 'var(--color-text-secondary)' }}>
+          <p className="text-center mb-8 text-lg" style={{ color: 'var(--color-text-secondary)' }}>
             iOS-Matching Web Interface - Thursday Client Demo
           </p>
-
-          <div className="form-fields">
+          <div className="form-fields flex flex-col gap-6">
             <div>
-              <label className="block mb-2 font-medium" style={{ color: 'var(--color-text-primary)' }}>
+              <label className="block mb-2 font-semibold text-base" style={{ color: 'var(--color-text-primary)' }}>
                 Educator Name
               </label>
               <ThickCursorTextField
@@ -36,9 +36,8 @@ export default function HomePage() {
                 name="educatorName"
               />
             </div>
-
             <div>
-              <label className="block mb-2 font-medium" style={{ color: 'var(--color-text-primary)' }}>
+              <label className="block mb-2 font-semibold text-base" style={{ color: 'var(--color-text-primary)' }}>
                 Student Name
               </label>
               <ThickCursorTextField
@@ -49,9 +48,8 @@ export default function HomePage() {
                 name="studentName"
               />
             </div>
-
             <div>
-              <label className="block mb-2 font-medium" style={{ color: 'var(--color-text-primary)' }}>
+              <label className="block mb-2 font-semibold text-base" style={{ color: 'var(--color-text-primary)' }}>
                 Date
               </label>
               <input
@@ -62,9 +60,8 @@ export default function HomePage() {
                 name="date"
               />
             </div>
-
             <div>
-              <label className="block mb-2 font-medium" style={{ color: 'var(--color-text-primary)' }}>
+              <label className="block mb-2 font-semibold text-base" style={{ color: 'var(--color-text-primary)' }}>
                 Engagement Summary
               </label>
               <ThickCursorTextEditor
@@ -75,9 +72,8 @@ export default function HomePage() {
                 name="engagementSummary"
               />
             </div>
-
             <div>
-              <label className="block mb-2 font-medium" style={{ color: 'var(--color-text-primary)' }}>
+              <label className="block mb-2 font-semibold text-base" style={{ color: 'var(--color-text-primary)' }}>
                 Learning Outcomes
               </label>
               <ThickCursorTextEditor
@@ -88,9 +84,8 @@ export default function HomePage() {
                 name="learningOutcomes"
               />
             </div>
-
             <div>
-              <label className="block mb-2 font-medium" style={{ color: 'var(--color-text-primary)' }}>
+              <label className="block mb-2 font-semibold text-base" style={{ color: 'var(--color-text-primary)' }}>
                 What&apos;s Next
               </label>
               <ThickCursorTextEditor
@@ -101,23 +96,21 @@ export default function HomePage() {
                 name="whatsNext"
               />
             </div>
-
             <div className="flex gap-4 mt-6">
-              <button className="button-base button-primary">
+              <button className="button-base button-primary text-base font-semibold px-6 py-2 rounded-lg">
                 Generate AI Report
               </button>
-              <button className="button-base button-secondary">
+              <button className="button-base button-secondary text-base font-semibold px-6 py-2 rounded-lg">
                 Add Media
               </button>
             </div>
           </div>
         </div>
-
-        <div className="report-container">
-          <h2 className="text-2xl font-bold mb-4" style={{ color: 'var(--color-text-primary)' }}>
+        <div className="report-container bg-white rounded-xl shadow-md p-8 flex-1">
+          <h2 className="text-2xl font-bold mb-4 text-center" style={{ color: 'var(--color-text-primary)' }}>
             Report Preview
           </h2>
-          <div className="space-y-4">
+          <div className="space-y-4 text-base">
             <div>
               <strong>Educator:</strong> {educatorName || 'Not specified'}
             </div>
