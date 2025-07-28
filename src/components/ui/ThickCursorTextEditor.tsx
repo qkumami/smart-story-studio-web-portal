@@ -55,7 +55,7 @@ export const ThickCursorTextEditor = forwardRef<HTMLTextAreaElement, ThickCursor
           {...getTextareaAttributes()}
           className={`texteditor-base ${className || ''}`}
           style={{
-            caretWidth: '5px',
+            caretColor: 'black',
             fontFamily: font,
             minHeight,
             maxHeight,

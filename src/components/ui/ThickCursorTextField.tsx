@@ -54,7 +54,7 @@ export const ThickCursorTextField = forwardRef<HTMLInputElement, ThickCursorText
           {...getInputAttributes()}
           className={`textfield-base ${className || ''}`}
           style={{
-            caretWidth: '5px',
+            caretColor: 'black',
             fontFamily: font,
           }}
         />
