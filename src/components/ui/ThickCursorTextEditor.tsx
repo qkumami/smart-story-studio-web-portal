@@ -1,4 +1,4 @@
-import React, { forwardRef, useState } from 'react';
+import React, { forwardRef } from 'react';
 
 export interface ThickCursorTextEditorProps {
   value: string;
@@ -21,14 +21,6 @@ export const ThickCursorTextEditor = forwardRef<HTMLTextAreaElement, ThickCursor
 
     const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
       onChange(e.target.value);
-    };
-
-    const handleFocus = () => {
-      setIsFocused(true);
-    };
-
-    const handleBlur = () => {
-      setIsFocused(false);
     };
 
     const getTextareaAttributes = () => {
@@ -54,8 +46,6 @@ export const ThickCursorTextEditor = forwardRef<HTMLTextAreaElement, ThickCursor
           ref={ref}
           value={value}
           onChange={handleChange}
-          onFocus={handleFocus}
-          onBlur={handleBlur}
           placeholder={placeholder}
           disabled={disabled}
           required={required}

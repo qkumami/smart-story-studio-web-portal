@@ -1,4 +1,4 @@
-import React, { forwardRef, useState } from 'react';
+import React, { forwardRef } from 'react';
 
 export interface ThickCursorTextFieldProps {
   value: string;
@@ -19,14 +19,6 @@ export const ThickCursorTextField = forwardRef<HTMLInputElement, ThickCursorText
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
       onChange(e.target.value);
-    };
-
-    const handleFocus = () => {
-      setIsFocused(true);
-    };
-
-    const handleBlur = () => {
-      setIsFocused(false);
     };
 
     const getInputAttributes = () => {
@@ -53,8 +45,6 @@ export const ThickCursorTextField = forwardRef<HTMLInputElement, ThickCursorText
           type="text"
           value={value}
           onChange={handleChange}
-          onFocus={handleFocus}
-          onBlur={handleBlur}
           placeholder={placeholder}
           disabled={disabled}
           required={required}
