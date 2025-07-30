@@ -83,13 +83,13 @@ export default function HomePage() {
 
           {/* Logo and Title */}
           <div className="text-center mb-8">
-            <div className="w-30 h-30 mx-auto mb-4 bg-white rounded-3xl shadow-lg flex items-center justify-center p-2">
+            <div className="w-24 h-24 mx-auto mb-4 bg-white rounded-2xl shadow-lg flex items-center justify-center">
               <Image
                 src="/ss-logo.png"
                 alt="Smart Story Studio Logo"
-                width={80}
-                height={80}
-                className="rounded-2xl"
+                width={96}
+                height={96}
+                className="rounded-xl"
               />
             </div>
             <h1 className="text-4xl font-black text-black">

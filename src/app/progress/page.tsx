@@ -106,13 +106,13 @@ ${aiResponse.educatorComment || 'Professional assessment completed.'}
               ← Back
             </button>
             <div className="text-center">
-              <div className="w-20 h-20 mx-auto mb-2 bg-white rounded-2xl shadow-lg flex items-center justify-center p-1">
+              <div className="w-16 h-16 mx-auto mb-2 bg-white rounded-xl shadow-lg flex items-center justify-center">
                 <Image
                   src="/ss-logo.png"
                   alt="Smart Story Studio Logo"
-                  width={60}
-                  height={60}
-                  className="rounded-xl"
+                  width={64}
+                  height={64}
+                  className="rounded-lg"
                 />
               </div>
               <h1 className="text-2xl font-black text-black">Progress Report</h1>
