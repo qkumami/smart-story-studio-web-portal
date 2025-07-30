@@ -196,21 +196,43 @@ ${aiResponse.educatorComment || 'Professional assessment completed.'}
           <div className="flex gap-4 mb-6">
             <button
               onClick={() => {
-                // Simulate email functionality
-                alert('Email functionality would be implemented here');
-              }}
-              className="flex-1 p-4 text-xl font-bold text-white bg-green-600 rounded-lg transition-all duration-200"
-            >
-              Send via Email
-            </button>
-            <button
-              onClick={() => {
-                // Simulate preview functionality
-                alert('Preview functionality would be implemented here');
+                // Navigate to preview with report data
+                const params = new URLSearchParams({
+                  title: 'Progress Report',
+                  educatorName: `${educatorFirstName} ${educatorLastName}`,
+                  studentName: `${studentFirstName} ${studentLastName}`,
+                  room: room,
+                  date: date,
+                  content: generatedReport,
+                  reportType: 'Progress'
+                });
+                router.push(`/preview?${params.toString()}`);
               }}
               className="flex-1 p-4 text-xl font-bold text-white bg-orange-500 rounded-lg transition-all duration-200"
             >
               Preview
+            </button>
+            <button
+              onClick={async () => {
+                try {
+                  const { pdfService } = await import('@/utils/pdfService');
+                  await pdfService.downloadPDF({
+                    title: 'Progress Report',
+                    educatorName: `${educatorFirstName} ${educatorLastName}`,
+                    studentName: `${studentFirstName} ${studentLastName}`,
+                    room: room,
+                    date: date,
+                    content: generatedReport,
+                    reportType: 'Progress'
+                  });
+                } catch (error) {
+                  console.error('PDF download error:', error);
+                  alert('Failed to download PDF. Please try again.');
+                }
+              }}
+              className="flex-1 p-4 text-xl font-bold text-white bg-blue-600 rounded-lg transition-all duration-200"
+            >
+              Download PDF
             </button>
           </div>
 
