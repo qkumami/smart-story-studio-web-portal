@@ -138,7 +138,7 @@ ${aiResponse.educatorComment}
                 <textarea
                   value={engagementSummary}
                   onChange={(e) => setEngagementSummary(e.target.value)}
-                  placeholder="Describe the child's engagement and activities..."
+                  placeholder="Describe the child&apos;s engagement and activities..."
                   className="w-full p-4 border border-gray-300 rounded-lg text-lg min-h-32 resize-none text-black"
                   style={{ caretColor: 'black' }}
                 />
@@ -159,7 +159,7 @@ ${aiResponse.educatorComment}
 
               <div>
                 <label className="block text-xl font-semibold text-black mb-2">
-                  What's Next
+                  What&apos;s Next
                 </label>
                 <textarea
                   value={whatsNext}
@@ -172,7 +172,7 @@ ${aiResponse.educatorComment}
 
               <div>
                 <label className="block text-xl font-semibold text-black mb-2">
-                  Educator's Comment
+                  Educator&apos;s Comment
                 </label>
                 <textarea
                   value={educatorComment}

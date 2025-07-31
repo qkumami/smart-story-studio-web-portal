@@ -28,7 +28,7 @@ interface ProgressAIResponse {
   educatorComment?: string;
 }
 
-import { AI_CONFIG, getApiKey } from '@/config/ai';
+import { getApiKey } from '@/config/ai';
 
 class AIService {
   private endpoint = 'https://api.openai.com/v1/chat/completions';
@@ -40,7 +40,7 @@ class AIService {
   // Security validation
   private sanitizeInput(input: string): string {
     // Remove potentially dangerous characters and limit length
-    let sanitized = input
+    const sanitized = input
       .replace(/<script>/g, '')
       .replace(/<\/script>/g, '')
       .replace(/javascript:/g, '')

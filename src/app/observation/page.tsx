@@ -178,7 +178,7 @@ ${aiResponse.comment}
 
               <div>
                 <label className="block text-xl font-semibold text-black mb-2">
-                  What's Next
+                  What&apos;s Next
                 </label>
                 <textarea
                   value={whatsNext}
@@ -191,7 +191,7 @@ ${aiResponse.comment}
 
               <div>
                 <label className="block text-xl font-semibold text-black mb-2">
-                  Educator's Comment
+                  Educator&apos;s Comment
                 </label>
                 <textarea
                   value={educatorComment}
